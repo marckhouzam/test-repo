@@ -8,7 +8,7 @@ on:
   create:
 jobs:
   echo:
-    if: ${{ startsWith(github.ref, 'release-') }}
+    if: ${{ startsWith(github.ref, 'refs/heads/release-') }}
     runs-on: ubuntu-latest
     steps:
      - name: Hello World
