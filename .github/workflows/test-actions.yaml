@@ -6,9 +6,9 @@ on:
     paths:     
      - 'dir1/**'
   create:
-    branches: [ release-* ]
 jobs:
   echo:
+    if: ${{ startsWith(github.ref, 'release-') }}
     runs-on: ubuntu-latest
     steps:
      - name: Hello World
