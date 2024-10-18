@@ -1,0 +1,16 @@
+name: "test actions"
+run-name: "test actions"
+on:
+  push:
+    branches: [ release-* ]
+    paths:     
+     - 'dir1/**'
+  create:
+    branches: [ release-* ]
+jobs:
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+     - name: Hello World
+       run: |
+        echo "Hello World"
